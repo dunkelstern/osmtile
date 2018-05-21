@@ -1,0 +1,7 @@
+{
+    "name": "Buildings",
+    "db_table": "osm_buildings",
+    "type": "polygon",
+    "style": "buildings",
+    "stroke": 1
+}

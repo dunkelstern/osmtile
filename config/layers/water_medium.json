@@ -1,0 +1,11 @@
+{
+    "name": "Water",
+    "db_table": "osm_waterareas_gen1",
+    "type": "polygon",
+    "style": "water",
+    "filter": {
+        "type": [
+            { "=": "water" }
+        ]
+    }
+}

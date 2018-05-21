@@ -1,0 +1,86 @@
+{
+    "global": {
+        "background": "#f0f0f0ff",
+        "projection": "merc",
+        "min_zoom": 0,
+        "max_zoom": 22,
+        "area": {
+            "xmin": -20037508.34,
+            "ymin": -20037508.34,
+            "xmax": 20037508.34,
+            "ymax": 20037508.34
+        },
+        "database": {
+            "user": "johannes",
+            "dbname": "geodjango",
+            "password": "design"
+        }
+    },
+    "fonts": "fonts.json",
+    "colors": "colors.json",
+    "icons": "icons.json",
+    "styles": "styles.json",
+    "layers": {
+        "0": [
+            "layers/water_low.json",
+            "layers/forests_low.json",
+            "layers/motorway_low.json"
+        ],
+        "8": [
+            "layers/water_low.json",
+            "layers/forests_low.json",
+            "layers/motorway_low.json",
+            "layers/waterways.json"
+        ],
+        "9": [
+            "layers/water_medium.json",
+            "layers/forests_medium.json",
+            "layers/motorway_medium.json",
+            "layers/waterways.json"
+        ],
+        "10": [
+            "layers/water_medium.json",
+            "layers/forests_medium.json",
+            "layers/motorway_medium.json",
+            "layers/waterways.json",
+            "layers/roads_low.json"
+        ],
+        "11": [
+            "layers/water_high.json",
+            "layers/forests_high.json",
+            "layers/motorway_medium.json",
+            "layers/waterways.json",
+            "layers/roads_medium.json"
+        ],
+        "12": [
+            "layers/water_high.json",
+            "layers/forests_high.json",
+            "layers/motorway_high.json",
+            "layers/waterways.json",
+            "layers/roads_medium.json"
+        ],
+        "13": [
+            "layers/water_high.json",
+            "layers/forests_high.json",
+            "layers/motorway_high.json",
+            "layers/waterways.json",
+            "layers/roads_high.json"
+        ],
+        "15": [
+            "layers/water_high.json",
+            "layers/forests_high.json",
+            "layers/motorway_high.json",
+            "layers/waterways.json",
+            "layers/roads_high.json",
+            "layers/buildings_high.json"
+        ],
+        "18": [
+            "layers/water_high.json",
+            "layers/forests_high.json",
+            "layers/motorway_high.json",
+            "layers/waterways.json",
+            "layers/roads_high.json",
+            "layers/buildings_high.json"
+        ]
+    }
+}

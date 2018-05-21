@@ -1,0 +1,20 @@
+{
+    "name": "Roads",
+    "db_table": "osm_roads_gen1",
+    "type": "line",
+    "text_column": "name",
+    "style": "road_residential",
+    "width": 8,
+    "stroke": 2,
+    "filter": {
+        "type": [
+            { "=": "secondary" },
+            { "=": "secondary_link" },
+            { "=": "tertiary" },
+            { "=": "tertiary_link" },
+            { "=": "unclassified" },
+            { "=": "residential" },
+            { "=": "living_street" }
+        ]
+    }
+}

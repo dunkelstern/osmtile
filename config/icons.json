@@ -1,0 +1,12 @@
+{
+    "forest": {
+        "filename": "img/tree@2x.png",
+        "colorize": "darken(forest, 20%)",
+        "scale": 0.5
+    },
+    "motorway": {
+        "filename": "img/motorway@2x.png",
+        "scale": 0.5,
+        "split_positions": [5, -5]
+    }
+}

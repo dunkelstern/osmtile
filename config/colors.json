@@ -1,0 +1,7 @@
+{
+    "road_residential": "#dddddd",
+    "road_motorway": "#e5a614",
+    "forest": "#59a855",
+    "water": "#6cd1fc",
+    "buildings": "#fff09b"
+}

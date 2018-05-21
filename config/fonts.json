@@ -1,0 +1,16 @@
+{
+    "country": {
+        "face": "DejaVu Sans",
+        "size": 50,
+        "style": "regular",
+        "weight": 800,
+        "halo_size": 3
+    },
+    "road": {
+        "face": "DejaVu Sans",
+        "size": 14,
+        "style": "regular",
+        "weight": 400,
+        "halo_size": 1
+    }
+}

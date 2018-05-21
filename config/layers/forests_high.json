@@ -1,0 +1,11 @@
+{
+    "name": "Forests",
+    "db_table": "osm_landusages",
+    "type": "polygon",
+    "style": "forest",
+    "filter": {
+        "type": [
+            { "=": "forest" }
+        ]
+    }
+}
