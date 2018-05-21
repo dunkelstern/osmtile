@@ -47,3 +47,12 @@ args = parser.parse_args()
 
 config = RenderConfig(vars(args))
 
+image = Renderer(config).render(
+    args.width,
+    args.height,
+    (args.center_lat, args.center_lon),
+    args.zoom
+)
+
+image.write_to_png('out.png')
+
