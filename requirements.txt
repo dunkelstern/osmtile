@@ -1,0 +1,4 @@
+pycairo
+psycopg2
+pyproj
+shapely[vectorized]
