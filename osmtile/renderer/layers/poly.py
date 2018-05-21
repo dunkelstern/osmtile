@@ -1,3 +1,5 @@
+from shapely.geometry import MultiPolygon
+
 from renderer.layers.tools import render_polygon, stroke_and_fill
 from .db import fetch_geometry
 from shapely.wkb import loads
@@ -12,7 +14,12 @@ def render_poly_layer(layer, clip_poly, config, image, context):
 
     for item in fetch_geometry(config.db, layer, clip_poly):
         poly = loads(item['geometry'], hex=True)
-        render_polygon(context, poly)
-        stroke_and_fill(context, style, layer.stroke)
+        if isinstance(poly, MultiPolygon):
+            for p in poly:
+                render_polygon(context, p)
+                stroke_and_fill(context, style, layer.stroke)
+        else:
+            render_polygon(context, poly)
+            stroke_and_fill(context, style, layer.stroke)
 
     context.restore()
