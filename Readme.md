@@ -2,9 +2,11 @@
 
 Python implementation for a OSM Map-Renderer
 
+![Example rendering](doc/example.png)
+
 ## TODO
 
-- Stroke and line width scales with scaling factor which is wrong
+- Stroke and line width scales with scaling factor which is probably wrong
 - Text (this will be quite hard)
 - Node rendering (Icons)
 - Effects (icon fill, pattern fill, etc.)
@@ -124,7 +126,7 @@ Example:
 ```
 
 - Dict: key = short Name or string (filename) or array (list of filenames)
-- Value one of: 
+- Value one of:
     - Array [r, g, b, a]
     - HTML Hex color: `#rrggbbaa`, shorthands allowed: `#rgb`.
       If alpha is skipped it is assumed as 1.0/fully opaque
@@ -219,7 +221,7 @@ Value: Dict key = short name or string (filename) or array (list of filenames)
 ### Zoomlevels
 
 ```json
-{ 
+{
     "layers": {
         "12": [
             {
@@ -241,7 +243,7 @@ Value: Dict key = short name or string (filename) or array (list of filenames)
                 "style": "road_residential",
                 "width": 5,
                 "stroke": 1
-            }, 
+            },
             {
                 "name": "Motorways",
                 "db_table": "motorways",
@@ -252,7 +254,7 @@ Value: Dict key = short name or string (filename) or array (list of filenames)
                 "stroke": 2
             }
         ]
-    } 
+    }
 }
 ```
 
@@ -265,11 +267,11 @@ Value: array (see below) or string (filename)
 #### Layer definition
 
 If array item is a string then it defines a file to load,
-if it is a dict the layer definition is inline 
+if it is a dict the layer definition is inline
 
 - `name`
 - `db_table`
-- `type` one of 
+- `type` one of
     - `node` (renders icons),
     - `polygon` (renders polygons),
     - `line` (renders lines of constant width)
