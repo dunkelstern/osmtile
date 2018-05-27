@@ -3,14 +3,11 @@ from shapely.wkb import loads
 from shapely.ops import cascaded_union, polygonize_full
 
 from .db import fetch_geometry
-from .tools import render_polygon, stroke_and_fill
+from .tools import render_polygon, stroke_and_fill, configure_context
 
 def render_line_layer(layer, clip_poly, config, image, context):
     context.save()
     style = config.styles[layer.style]
-
-    context.set_line_width(layer.stroke)
-    context.set_source_rgba(*style.fill_color)
 
     polys = []
     poly = None
@@ -21,6 +18,7 @@ def render_line_layer(layer, clip_poly, config, image, context):
     poly = cascaded_union(polys).buffer(layer.width / 2.0 + layer.stroke / 2.0)
 
     if not poly.is_empty:
+        configure_context(context, layer, style)
         if isinstance(poly, MultiPolygon):
             for p in poly:
                 render_polygon(context, p)

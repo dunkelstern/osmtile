@@ -1,0 +1,13 @@
+{
+    "name": "Quartier",
+    "db_table": "osm_admin",
+    "type": "polygon",
+    "text_column": "name",
+    "style": "border_quartier",
+    "stroke": 1,
+    "filter": {
+        "admin_level": [
+            { "=": 11 }
+        ]
+    }
+}

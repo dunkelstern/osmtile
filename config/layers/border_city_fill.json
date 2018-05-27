@@ -1,0 +1,32 @@
+[
+    {
+        "name": "City",
+        "db_table": "osm_landusages_gen1",
+        "type": "polygon",
+        "text_column": "name",
+        "style": "border_city_fill",
+        "filter": {
+            "type": [
+                { "=": "residential" },
+                { "=": "commercial" },
+                { "=": "cemetery" },
+                { "=": "parking" },
+                { "=": "schools" }
+            ]
+        }
+    },
+
+    {
+        "name": "Borough",
+        "db_table": "osm_admin",
+        "type": "polygon",
+        "text_column": "name",
+        "style": "border_city_fill",
+        "filter": {
+            "admin_level": [
+                { "=": 9 },
+                { "=": 10 }
+            ]
+        }
+    }
+]

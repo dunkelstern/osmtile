@@ -1,0 +1,13 @@
+{
+    "name": "Country",
+    "db_table": "osm_admin",
+    "type": "polygon",
+    "text_column": "name",
+    "style": "border_country",
+    "stroke": 3,
+    "filter": {
+        "admin_level": [
+            { "=": 3 }
+        ]
+    }
+}

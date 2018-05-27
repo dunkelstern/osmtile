@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Railways",
+        "db_table": "osm_roads",
+        "type": "line",
+        "text_column": "name",
+        "style": "railway",
+        "width": 6,
+        "stroke": 1,
+        "filter": {
+            "type": [
+                { "=": "rail" }
+            ],
+            "class": [
+                { "=": "railway" }
+            ]
+        }
+    },
+    {
+        "name": "Subway/Tram",
+        "db_table": "osm_roads",
+        "type": "line",
+        "text_column": "name",
+        "style": "subway",
+        "width": 2,
+        "filter": {
+            "type": [
+                { "=": "subway" },
+                { "=": "tram" }
+            ],
+            "class": [
+                { "=": "railway" }
+            ]
+        }
+    }
+
+]

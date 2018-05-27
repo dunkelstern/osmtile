@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Schools",
+        "db_table": "osm_landusages",
+        "type": "polygon",
+        "style": "zone_school",
+        "filter": {
+            "type": [
+                { "=": "school" }
+            ]
+        }
+    },
+    {
+        "name": "Commercial",
+        "db_table": "osm_landusages",
+        "type": "polygon",
+        "style": "zone_commercial",
+        "filter": {
+            "type": [
+                { "=": "commercial" }
+            ]
+        }
+    },
+    {
+        "name": "Parking",
+        "db_table": "osm_landusages",
+        "type": "polygon",
+        "style": "zone_parking",
+        "filter": {
+            "type": [
+                { "=": "parking" }
+            ]
+        }
+    }
+]

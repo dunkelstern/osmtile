@@ -9,16 +9,46 @@ class LayerConfig:
         'polygon'
     ]
 
-    def __init__(self, data, config):
+    @classmethod
+    def parse(cls, data, config):
+        result = []
         if isinstance(data, str):
             # load from file
             with open(data, 'r') as fp:
                 data = json.load(fp, object_pairs_hook=OrderedDict)
-        
+            return LayerConfig.parse(data, config)
+        elif isinstance(data, list):
+            for item in data:
+                if isinstance(item, str):
+                    result.extend(LayerConfig.parse(item, config))
+                else:
+                    conf = LayerConfig()
+                    conf._parse(item, config)
+                    result.append(conf)
+        else:
+            conf = LayerConfig()
+            conf._parse(data, config)
+            result.append(conf)
+
+        return result
+
+    def __init__(self):
+        self.name = None
+        self.db_table = None
+        self.type = None
+        self.style = None
+        self.text_column = None
+        self.icon = None
+        self.effect3d = None
+        self.stroke = None
+        self.width = None
+        self.filter = None
+
+    def _parse(self, data, config):
         # fetch properties
         self.name = data.get('name')
         self.db_table = data.get('db_table')
-        
+
         # type
         self.type = data.get('type', 'node')
         if self.type not in self.LAYER_TYPES:
@@ -40,7 +70,7 @@ class LayerConfig:
                     ", ".join(config.styles.keys())
                 )
             )
-        
+
         # text column
         self.text_column = data.get('text_column', None)
 
@@ -55,7 +85,7 @@ class LayerConfig:
                         ", ".join(config.icons.keys())
                     )
                 )
-            
+
         # type = polygon specific
         if self.type == 'polygon':
             self.effect3d = data.get('3d', None)
@@ -65,7 +95,7 @@ class LayerConfig:
         if self.type == 'line':
             self.width = data.get('width', 2)
             self.stroke = data.get('stroke', 0)
-        
+
         # filter
         self.filter = data.get('filter', None)
 
@@ -74,15 +104,17 @@ class LayerConfig:
             return "True"
         result = []
         for field, filters in self.filter.items():
+            sub = []
             for item in filters:
-                result.append(
+                sub.append(
                     "{field} {op} '{value}'".format(
                         field=field,
                         op=list(item.keys())[0],
                         value=list(item.values())[0]
                     )
                 )
-        return ' OR '.join(result)
+            result.append('(' + (' OR '.join(sub)) + ')')
+        return ' AND '.join(result)
 
     def serialize(self):
         result = {
@@ -109,7 +141,7 @@ class LayersConfig:
     def __init__(self, data, config):
         self.min_zoom = 0
         self.max_zoom = 0
-        
+
         layers = []
         for zoomlevel, layer in data.items():
 
@@ -125,13 +157,19 @@ class LayersConfig:
                     layers.append(layers[-1])
 
             self.max_zoom = int(zoomlevel)
-            if isinstance(data, str):
-                # include external file
-                with open(data, 'r') as fp:
-                    layers.append(self.parse(json.load(fp, object_pairs_hook=OrderedDict), config))
-            else:
-                layers.append(self.parse(layer, config))
-        
+            layers.append(self.parse(layer, config))
+            # if isinstance(data, str):
+            #     # include external file
+            #     with open(data, 'r') as fp:
+            #         imported = json.load(fp, object_pairs_hook=OrderedDict)
+            #         if isinstance(imported, list):
+            #             for item in imported:
+            #                 layers.append(self.parse(item, config))
+            #         else:
+            #             layers.append(self.parse(imported, config))
+            # else:
+            #     layers.append(self.parse(layer, config))
+
         self.layers = layers
 
     def __iter__(self):
@@ -144,7 +182,7 @@ class LayersConfig:
             raise TypeError("Use int values for key")
 
     def parse(self, data, config):
-        return [LayerConfig(item, config) for item in data]
+        return LayerConfig.parse(data, config)
 
     def serialize(self):
         result = {}

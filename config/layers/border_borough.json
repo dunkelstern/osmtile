@@ -1,0 +1,13 @@
+{
+    "name": "Borough",
+    "db_table": "osm_admin",
+    "type": "polygon",
+    "text_column": "name",
+    "style": "border_borough",
+    "filter": {
+        "admin_level": [
+            { "=": 9 },
+            { "=": 10 }
+        ]
+    }
+}

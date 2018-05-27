@@ -1,0 +1,13 @@
+{
+    "name": "City",
+    "db_table": "osm_admin",
+    "type": "polygon",
+    "text_column": "name",
+    "style": "border_city",
+    "stroke": 1,
+    "filter": {
+        "admin_level": [
+            { "=": 6 }
+        ]
+    }
+}

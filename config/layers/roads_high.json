@@ -15,6 +15,9 @@
             { "=": "unclassified" },
             { "=": "residential" },
             { "=": "living_street" }
+        ],
+        "class": [
+            { "=": "highway" }
         ]
     }
 }

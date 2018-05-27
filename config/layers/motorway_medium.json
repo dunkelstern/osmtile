@@ -2,18 +2,14 @@
     "name": "Motorways",
     "db_table": "osm_roads_gen1",
     "type": "line",
-    "text_column": "name",
+    "text_column": "ref",
     "style": "road_motorway",
-    "width": 9,
-    "stroke": 2,
+    "width": 40,
+    "stroke": 10,
     "filter": {
         "type": [
             { "=": "motorway" },
-            { "=": "motorway_link" },
-            { "=": "primary" },
-            { "=": "primary_link" },
-            { "=": "trunk" },
-            { "=": "trunk_link" }
+            { "=": "motorway_link" }
         ]
     }
 }

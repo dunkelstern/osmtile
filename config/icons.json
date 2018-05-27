@@ -8,5 +8,10 @@
         "filename": "img/motorway@2x.png",
         "scale": 0.5,
         "split_positions": [5, -5]
+    },
+    "primary": {
+        "filename": "img/primary@2x.png",
+        "scale": 0.5,
+        "split_positions": [5, -5]
     }
 }

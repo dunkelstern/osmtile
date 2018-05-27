@@ -1,19 +1,109 @@
 {
+    "border_country": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_state": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_county": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "stroke_style": "dashed",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_city": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "stroke_style": "dashed",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_town": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "stroke_style": "dashed",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_borough": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "stroke_style": "stippled",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_quartier": {
+        "fill_color": "#0000",
+        "stroke_color": "border",
+        "stroke_style": "dashed",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+
+    "border_city_fill": {
+        "fill_color": "zone_residential",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+    "border_town_fill": {
+        "fill_color": "alpha(border, 0.2)",
+        "description_font": "country",
+        "text_color": "darken(border, 20%)",
+        "halo_color": "#fff"
+    },
+
+
     "road_residential": {
         "fill_color": "road_residential",
         "stroke_color": "darken(road_residential, 20%)",
         "description_font": "road",
         "text_color": "darken(road_residential, 20%)",
-        "halo_color": [1.0, 1.0, 1.0, 1.0]
+        "halo_color": "#fff"
     },
     "road_motorway": {
         "fill_color": "road_motorway",
         "stroke_color": "darken(road_motorway, 20%)",
         "description_font": "road",
         "text_color": "darken(road_motorway, 20%)",
-        "halo_color": [1.0, 1.0, 1.0, 1.0],
+        "halo_color": "#fff",
         "shield_icon": "motorway"
     },
+    "road_primary": {
+        "fill_color": "road_primary",
+        "stroke_color": "darken(road_primary, 20%)",
+        "description_font": "road",
+        "text_color": "darken(road_primary, 20%)",
+        "halo_color": "#fff",
+        "shield_icon": "primary"
+    },
+
+    "railway": {
+        "fill_color": "railway",
+        "stroke_color": "darken(railway, 20%)",
+        "fill_style": "dashed"
+    },
+
+    "subway": {
+        "fill_color": "subway",
+        "stroke_color": "darken(subway, 20%)",
+        "fill_style": "dashed"
+    },
+
     "forest": {
         "fill_color": "forest",
         "font": "road",
@@ -21,10 +111,6 @@
         "halo_color": "lighten(forest, 20%)",
         "fill_pattern_icon": "forest",
         "fill_pattern_spacing": 30
-    },
-    "buildings": {
-        "fill_color": "buildings",
-        "stroke_color": "darken(buildings, 30%)"
     },
     "water": {
         "fill_color": "water"
@@ -34,6 +120,32 @@
         "stroke_color": "darken(water, 20%)",
         "description_font": "road",
         "text_color": "darken(water, 20%)",
-        "halo_color": [1.0, 1.0, 1.0, 1.0]
+        "halo_color": "#fff"
+    },
+
+    "buildings": {
+        "fill_color": "buildings",
+        "stroke_color": "darken(buildings, 15%)"
+    },
+
+    "public_buildings": {
+        "fill_color": "public_buildings",
+        "stroke_color": "darken(public_buildings, 15%)"
+    },
+
+    "zone_commercial": {
+        "fill_color": "zone_commercial"
+    },
+
+    "zone_parking": {
+        "fill_color": "zone_parking"
+    },
+
+    "zone_school": {
+        "fill_color": "zone_school",
+        "description_font": "road",
+        "text_color": "darken(zone_school, 20%)",
+        "halo_color": "#fff"
     }
+
 }

@@ -1,4 +1,5 @@
 import argparse
+import datetime
 from osmtile import *
 
 
@@ -45,14 +46,20 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+start = datetime.datetime.now()
 config = RenderConfig(vars(args))
+end = datetime.datetime.now()
+print("Parsing config took {} ms".format((end-start).total_seconds() * 1000.0))
 
+start = datetime.datetime.now()
 image = Renderer(config).render(
-    args.width,
-    args.height,
+    args.width[0],
+    args.height[0],
     (args.center_lat, args.center_lon),
     args.zoom
 )
+end = datetime.datetime.now()
+print("Rendering took {} ms".format((end-start).total_seconds() * 1000.0))
 
 image.write_to_png('out.png')
 

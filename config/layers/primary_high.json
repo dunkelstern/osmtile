@@ -1,0 +1,20 @@
+{
+    "name": "Primary",
+    "db_table": "osm_roads",
+    "type": "line",
+    "text_column": "ref",
+    "style": "road_primary",
+    "width": 12,
+    "stroke": 3,
+    "filter": {
+        "type": [
+            { "=": "primary" },
+            { "=": "primary_link" },
+            { "=": "trunk" },
+            { "=": "trunk_link" }
+        ],
+        "class": [
+            { "=": "highway" }
+        ]
+    }
+}

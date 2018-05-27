@@ -1,12 +1,13 @@
 import cairo
 from pyproj import Proj, transform
 from .layers import *
+import datetime
 
 class Renderer:
 
     def __init__(self, config):
         self.config = config
-    
+
     def render(self, width, height, center, zoom):
         # calculate zoom and image aspect
         zoom_denominator = 2 ** zoom
@@ -29,11 +30,12 @@ class Renderer:
             (center_merc[0] - render_width / 2.0, center_merc[1] - render_height / 2.0),
             (center_merc[0] + render_width / 2.0, center_merc[1] - render_height / 2.0),
             (center_merc[0] + render_width / 2.0, center_merc[1] + render_height / 2.0),
-            (center_merc[0] - render_width / 2.0, center_merc[1] + render_height / 2.0),            
+            (center_merc[0] - render_width / 2.0, center_merc[1] + render_height / 2.0),
             (center_merc[0] - render_width / 2.0, center_merc[1] - render_height / 2.0),
         ]
 
         wkt_poly = 'POLYGON((' + ','.join([' '.join([str(x) for x in c]) for c in poly]) + '))'
+        print("clipping to {}".format(wkt_poly))
 
         image, context = self.create_image(
             width,
@@ -45,7 +47,10 @@ class Renderer:
 
         layer_stack = self.config.layers[zoom]
         for layer in layer_stack:
+            start = datetime.datetime.now()
             self.render_layer(layer, wkt_poly, image, context)
+            end = datetime.datetime.now()
+            print(" - Rendering layer {} took {} ms".format(layer.name, (end - start).total_seconds() * 1000.0))
 
         return image
 

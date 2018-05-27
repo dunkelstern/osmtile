@@ -1,0 +1,16 @@
+{
+    "name": "Waterways",
+    "db_table": "osm_waterways_gen1",
+    "type": "line",
+    "text_column": "name",
+    "style": "waterway",
+    "width": 12,
+    "stroke": 2,
+    "filter": {
+        "type": [
+            { "=": "canal" },
+            { "=": "river" },
+            { "=": "stream" }
+        ]
+    }
+}

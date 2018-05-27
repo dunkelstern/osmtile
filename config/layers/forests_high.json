@@ -1,11 +1,17 @@
 {
-    "name": "Forests",
+    "name": "Nature/Park",
     "db_table": "osm_landusages",
     "type": "polygon",
     "style": "forest",
     "filter": {
         "type": [
-            { "=": "forest" }
+            { "=": "forest" },
+            { "=": "playground" },
+            { "=": "park" },
+            { "=": "allotments" },
+            { "=": "pitch" },
+            { "=": "garden" },
+            { "=": "recreation_ground" }
         ]
     }
 }

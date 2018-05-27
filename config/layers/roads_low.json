@@ -4,17 +4,17 @@
     "type": "line",
     "text_column": "name",
     "style": "road_residential",
-    "width": 8,
-    "stroke": 2,
+    "width": 16,
+    "stroke": 4,
     "filter": {
         "type": [
             { "=": "secondary" },
             { "=": "secondary_link" },
             { "=": "tertiary" },
-            { "=": "tertiary_link" },
-            { "=": "unclassified" },
-            { "=": "residential" },
-            { "=": "living_street" }
+            { "=": "tertiary_link" }
+        ],
+        "class": [
+            { "=": "highway" }
         ]
     }
 }

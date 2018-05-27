@@ -1,9 +1,9 @@
+import datetime
 from psycopg2.extras import DictCursor, RealDictCursor
 
 def fetch_geometry(db, layer, clip_poly):
     cursor = db.cursor(cursor_factory=RealDictCursor)
-    cursor.execute(
-        '''
+    sql = '''
             SELECT *
             FROM {table}
             WHERE ST_Intersects(
@@ -15,7 +15,12 @@ def fetch_geometry(db, layer, clip_poly):
             filter=layer.compile_filter(),
             clip_poly=clip_poly
         )
-    )
+
+    # print(sql)
+    start = datetime.datetime.now()
+    cursor.execute(sql)
+    end = datetime.datetime.now()
+    print(" -> Query for {} took {} ms".format(layer.name, (end - start).total_seconds() * 1000.0))
 
     for result in cursor:
         yield result

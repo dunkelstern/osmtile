@@ -1,0 +1,13 @@
+{
+    "name": "County",
+    "db_table": "osm_admin",
+    "type": "polygon",
+    "text_column": "name",
+    "style": "border_county",
+    "stroke": 2,
+    "filter": {
+        "admin_level": [
+            { "=": 5 }
+        ]
+    }
+}

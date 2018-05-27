@@ -1,0 +1,17 @@
+{
+    "name": "Railways",
+    "db_table": "osm_roads_gen0",
+    "type": "line",
+    "text_column": "name",
+    "style": "railway",
+    "width": 24,
+    "stroke": 3,
+    "filter": {
+        "type": [
+            { "=": "rail" }
+        ],
+        "class": [
+            { "=": "railway" }
+        ]
+    }
+}

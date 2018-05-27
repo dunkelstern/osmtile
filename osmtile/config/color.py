@@ -18,9 +18,9 @@ class ColorConfig:
             if key.tolower() == 'r':
                 return self.color_value[0]
             elif key.tolower() == 'g':
-                return self.color_value[1] 
+                return self.color_value[1]
             elif key.tolower() == 'b':
-                return self.color_value[2] 
+                return self.color_value[2]
             elif key.tolower() == 'a':
                 return self.color_value[3]
             else:
@@ -36,7 +36,7 @@ class ColorConfig:
     def rgb(self):
         return self.color_value[:3]
 
-    @property    
+    @property
     def alpha(self):
         return self.color_value[3]
 
@@ -50,7 +50,7 @@ class ColorConfig:
                 return (data[0], data[1], data[2], 1.0)
             if len(data) == 4:  # rgb with alpha
                 return tuple(data)
-        
+
         if isinstance(data, str):
             if data[0] == "#":  # html hex color
                 r = g = b = a = 0.0
@@ -95,9 +95,9 @@ class ColorConfig:
             elif data.startswith('lighten('):  # lighten other color
                 other, amount = [x.strip() for x in data[8:-1].split(',')]
                 if amount[-1] == '%':
-                    amount = int(amount[:-1]) / 100.0
+                    amount = 1.0 + int(amount[:-1]) / 100.0
                 else:
-                    amount = int(amount)
+                    amount = 1.0 + float(amount)
                 other_color = defined_colors.get(other)
                 if other_color == None:
                     raise ValueError(
@@ -131,7 +131,7 @@ class ColorConfig:
                 if amount[-1] == '%':
                     amount = int(amount[:-1]) / 100.0
                 else:
-                    amount = int(amount)
+                    amount = float(amount)
 
                 other_color = defined_colors.get(other)
                 if other_color == None:
@@ -141,6 +141,6 @@ class ColorConfig:
                             ", ".join(defined_colors.keys())
                         )
                     )
-                return (*other_color[0:-1], other[3] * amount)
+                return (*other_color[0:-1], amount)
             else: # reference other color
                 return defined_colors[data]

@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Service Roads",
+        "db_table": "osm_roads",
+        "type": "line",
+        "text_column": "name",
+        "style": "road_residential",
+        "width": 5,
+        "filter": {
+            "type": [
+                { "=": "service" }
+            ],
+            "class": [
+                { "=": "highway" }
+            ]
+        }
+    },
+    {
+        "name": "Footways",
+        "db_table": "osm_roads",
+        "type": "line",
+        "text_column": "name",
+        "style": "road_residential",
+        "width": 4,
+        "filter": {
+            "type": [
+                { "=": "path" },
+                { "=": "footway" }
+            ],
+            "class": [
+                { "=": "highway" }
+            ]
+        }
+    }
+]

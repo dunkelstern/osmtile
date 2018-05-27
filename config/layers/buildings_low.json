@@ -1,0 +1,38 @@
+{
+    "name": "Public Buildings",
+    "db_table": "osm_buildings",
+    "type": "polygon",
+    "style": "public_buildings",
+    "stroke": 1,
+    "filter": {
+        "name": [
+            { "<>": "" }
+        ],
+        "area": [
+            { ">": 1000 }
+        ],
+        "type": [
+            { "=": "public" },
+            { "=": "commercial" },
+            { "=": "office" },
+
+            { "=": "school" },
+            { "=": "kindergarden" },
+            { "=": "university" },
+
+            { "=": "church" },
+            { "=": "chapel" },
+            { "=": "cathedral" },
+
+            { "=": "hotel" },
+            { "=": "hospital" },
+            { "=": "civic" },
+
+            { "=": "supermarket" },
+            { "=": "shop" },
+            { "=": "retail" },
+
+            { "=": "stadium" }
+        ]
+    }
+}

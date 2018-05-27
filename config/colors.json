@@ -1,7 +1,16 @@
 {
     "road_residential": "#dddddd",
-    "road_motorway": "#e5a614",
-    "forest": "#59a855",
-    "water": "#6cd1fc",
-    "buildings": "#fff09b"
+    "road_motorway": "#ffd230",
+    "road_primary": "#fce08d",
+    "railway": "#aaaaaa",
+    "subway": "#ff00ff60",
+    "forest": "#6da372",
+    "water": "#8de8fc",
+    "buildings": "#e8e8e8",
+    "public_buildings": "#e0d9c3",
+    "border": "#ff000080",
+    "zone_commercial": "#ffe0e0",
+    "zone_school": "lighten(public_buildings, 10%)",
+    "zone_parking": "#e8e8f8",
+    "zone_residential": "#c0c0c040"
 }
