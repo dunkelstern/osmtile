@@ -5,6 +5,7 @@
     "text_column": "name",
     "style": "border_city",
     "stroke": 1,
+    "min_pixel_width": 1,
     "filter": {
         "admin_level": [
             { "=": 6 }

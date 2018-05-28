@@ -138,6 +138,11 @@
         "stroke_color": "darken(buildings, 15%)"
     },
 
+    "buildings_light": {
+        "fill_color": "lighten(buildings, 5%)",
+        "stroke_color": "darken(buildings, 5%)"
+    },
+
     "public_buildings": {
         "fill_color": "public_buildings",
         "stroke_color": "darken(public_buildings, 15%)"

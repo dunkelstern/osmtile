@@ -4,8 +4,9 @@
     "type": "line",
     "text_column": "name",
     "style": "road_residential",
-    "width": 10,
-    "stroke": 3,
+    "width": 7,
+    "min_pixel_width": 6,
+    "stroke": 2,
     "filter": {
         "type": [
             { "=": "secondary" },

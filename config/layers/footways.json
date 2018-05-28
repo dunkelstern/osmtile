@@ -21,7 +21,7 @@
         "type": "line",
         "text_column": "name",
         "style": "road_residential_simple",
-        "width": 4,
+        "width": 3,
         "filter": {
             "type": [
                 { "=": "path" },

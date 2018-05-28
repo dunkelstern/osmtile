@@ -42,6 +42,7 @@ class LayerConfig:
         self.effect3d = None
         self.stroke = None
         self.width = None
+        self.min_pixel_width = None
         self.filter = None
         self.expand = None
 
@@ -96,6 +97,7 @@ class LayerConfig:
         # type = line specific
         if self.type == 'line':
             self.width = data.get('width', 2)
+            self.min_pixel_width = data.get('min_pixel_width', None)
             self.stroke = data.get('stroke', 0)
 
         # filter

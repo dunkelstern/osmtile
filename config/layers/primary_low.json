@@ -5,8 +5,9 @@
         "type": "line",
         "text_column": "ref",
         "style": "road_residential_simple",
-        "width": 200,
-        "stroke": 30,
+        "width": 10,
+        "min_pixel_width": 4,
+        "stroke": 2,
         "filter": {
             "type": [
                 { "=": "secondary" },
@@ -23,8 +24,9 @@
         "type": "line",
         "text_column": "ref",
         "style": "road_primary",
-        "width": 200,
-        "stroke": 30,
+        "width": 12,
+        "min_pixel_width": 5,
+        "stroke": 3,
         "filter": {
             "type": [
                 { "=": "primary" },

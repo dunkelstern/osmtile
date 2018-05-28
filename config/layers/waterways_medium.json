@@ -4,8 +4,9 @@
     "type": "line",
     "text_column": "name",
     "style": "waterway",
-    "width": 12,
-    "stroke": 2,
+    "width": 6,
+    "min_pixel_width": 4,
+    "stroke": 1,
     "filter": {
         "type": [
             { "=": "canal" },

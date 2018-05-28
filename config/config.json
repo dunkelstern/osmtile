@@ -1,6 +1,6 @@
 {
     "global": {
-        "background": "#f0f0f0ff",
+        "background": "#f8f8f8ff",
         "projection": "merc",
         "min_zoom": 0,
         "max_zoom": 22,
@@ -12,7 +12,8 @@
         },
         "database": {
             "user": "dark",
-            "dbname": "dark"
+            "dbname": "dark",
+            "password": "design"
         }
     },
     "fonts": "fonts.json",
@@ -24,6 +25,7 @@
             "layers/border_country.json"
         ],
         "8": [
+            "layers/border_city_fill.json",
             "layers/forests_low.json",
             "layers/water_low.json",
             "layers/primary_low.json",
@@ -31,10 +33,10 @@
             "layers/motorway_low.json",
             "layers/border_country.json",
             "layers/border_state.json",
-            "layers/border_county.json",
-            "layers/border_city_fill.json"
+            "layers/border_county.json"
         ],
         "9": [
+            "layers/border_city_fill.json",
             "layers/forests_low.json",
             "layers/water_medium.json",
             "layers/waterways_low.json",
@@ -43,10 +45,10 @@
             "layers/motorway_medium.json",
             "layers/border_country.json",
             "layers/border_state.json",
-            "layers/border_county.json",
-            "layers/border_city_fill.json"
+            "layers/border_county.json"
         ],
         "10": [
+            "layers/border_city_fill.json",
             "layers/forests_low.json",
             "layers/water_medium.json",
             "layers/waterways_medium.json",
@@ -56,10 +58,10 @@
             "layers/motorway_medium.json",
             "layers/border_country.json",
             "layers/border_state.json",
-            "layers/border_county.json",
-            "layers/border_city_fill.json"
+            "layers/border_county.json"
         ],
         "11": [
+            "layers/border_city_fill.json",
             "layers/forests_high.json",
             "layers/water_high.json",
             "layers/waterways_low.json",
@@ -71,10 +73,10 @@
             "layers/border_state.json",
             "layers/border_county.json",
             "layers/border_city.json",
-            "layers/border_town.json",
-            "layers/border_city_fill.json"
+            "layers/border_town.json"
         ],
         "12": [
+            "layers/border_city_fill.json",
             "layers/forests_high.json",
             "layers/water_high.json",
             "layers/waterways_medium.json",
@@ -88,10 +90,10 @@
             "layers/border_county.json",
             "layers/border_city.json",
             "layers/border_town.json",
-            "layers/border_borough.json",
-            "layers/border_city_fill.json"
+            "layers/border_borough.json"
         ],
         "13": [
+            "layers/border_city_fill.json",
             "layers/forests_high.json",
             "layers/water_high.json",
             "layers/amenities_medium.json",
@@ -110,6 +112,7 @@
             "layers/border_city_quartier.json"
         ],
         "15": [
+            "layers/border_city_fill.json",
             "layers/forests_high.json",
             "layers/amenities_high.json",
             "layers/water_high.json",
@@ -129,6 +132,7 @@
             "layers/border_city_quartier.json"
         ],
         "18": [
+            "layers/border_city_fill.json",
             "layers/forests_high.json",
             "layers/amenities_high.json",
             "layers/water_high.json",

@@ -5,6 +5,7 @@
     "text_column": "name",
     "style": "border_state",
     "stroke": 3,
+    "min_pixel_width": 1,
     "filter": {
         "admin_level": [
             { "=": 4 }

@@ -1,16 +1,16 @@
 {
-    "road_residential": "#dddddd",
+    "road_residential": "#d0d0d0",
     "road_motorway": "#ffd230",
     "road_primary": "#fce08d",
     "railway": "#aaaaaa",
     "subway": "#ff00ff60",
     "forest": "#c0e5ae",
     "water": "#8de8fc",
-    "buildings": "#e8e8e8",
+    "buildings": "#d0d0d0",
     "public_buildings": "#e0d9c3",
     "border": "#ff000080",
     "zone_commercial": "#ffe0e0",
     "zone_school": "lighten(public_buildings, 10%)",
     "zone_parking": "#e8e8f8",
-    "zone_residential": "#c0c0c040"
+    "zone_residential": "#c0c0c030"
 }

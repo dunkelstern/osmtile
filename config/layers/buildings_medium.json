@@ -41,7 +41,7 @@
         "name": "Buildings",
         "db_table": "osm_buildings",
         "type": "polygon",
-        "style": "buildings",
+        "style": "buildings_light",
         "stroke": 1,
         "filter": {
             "type": [

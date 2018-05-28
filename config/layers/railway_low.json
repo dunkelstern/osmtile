@@ -4,8 +4,9 @@
     "type": "line",
     "text_column": "name",
     "style": "railway",
-    "width": 150,
-    "stroke": 30,
+    "width": 6,
+    "min_pixel_width": 6,
+    "stroke": 1,
     "filter": {
         "type": [
             { "=": "rail" }

@@ -5,6 +5,7 @@
     "text_column": "name",
     "style": "border_country",
     "stroke": 3,
+    "min_pixel_width": 2,
     "filter": {
         "admin_level": [
             { "=": 3 }

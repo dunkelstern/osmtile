@@ -5,6 +5,7 @@
     "text_column": "name",
     "style": "border_county",
     "stroke": 2,
+    "min_pixel_width": 1,
     "filter": {
         "admin_level": [
             { "=": 5 }

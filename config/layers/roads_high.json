@@ -4,7 +4,8 @@
     "type": "line",
     "text_column": "name",
     "style": "road_residential",
-    "width": 8,
+    "width": 7,
+    "min_pixel_width": 5,
     "stroke": 2,
     "filter": {
         "type": [

@@ -4,7 +4,8 @@
     "type": "line",
     "text_column": "ref",
     "style": "road_motorway",
-    "width": 12,
+    "width": 15,
+    "min_pixel_width": 8,
     "stroke": 3,
     "filter": {
         "type": [
