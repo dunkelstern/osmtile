@@ -1,20 +1,40 @@
-{
-    "name": "Primary",
-    "db_table": "osm_roads_gen0",
-    "type": "line",
-    "text_column": "ref",
-    "style": "road_primary",
-    "width": 80,
-    "stroke": 20,
-    "filter": {
-        "type": [
-            { "=": "primary" },
-            { "=": "primary_link" },
-            { "=": "trunk" },
-            { "=": "trunk_link" }
-        ],
-        "class": [
-            { "=": "highway" }
-        ]
+[
+    {
+        "name": "Secondary",
+        "db_table": "osm_roads_gen0",
+        "type": "line",
+        "text_column": "ref",
+        "style": "road_residential_simple",
+        "width": 200,
+        "stroke": 30,
+        "filter": {
+            "type": [
+                { "=": "secondary" },
+                { "=": "secondary_link" }
+            ],
+            "class": [
+                { "=": "highway" }
+            ]
+        }
+    },
+    {
+        "name": "Primary",
+        "db_table": "osm_roads_gen0",
+        "type": "line",
+        "text_column": "ref",
+        "style": "road_primary",
+        "width": 200,
+        "stroke": 30,
+        "filter": {
+            "type": [
+                { "=": "primary" },
+                { "=": "primary_link" },
+                { "=": "trunk" },
+                { "=": "trunk_link" }
+            ],
+            "class": [
+                { "=": "highway" }
+            ]
+        }
     }
-}
+]

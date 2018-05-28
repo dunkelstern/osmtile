@@ -3,6 +3,7 @@
     "db_table": "osm_landusages_gen0",
     "type": "polygon",
     "style": "forest",
+    "expand": 100,
     "filter": {
         "type": [
             { "=": "forest" }

@@ -4,7 +4,7 @@
         "db_table": "osm_roads",
         "type": "line",
         "text_column": "name",
-        "style": "road_residential",
+        "style": "road_residential_simple",
         "width": 5,
         "filter": {
             "type": [
@@ -20,7 +20,7 @@
         "db_table": "osm_roads",
         "type": "line",
         "text_column": "name",
-        "style": "road_residential",
+        "style": "road_residential_simple",
         "width": 4,
         "filter": {
             "type": [

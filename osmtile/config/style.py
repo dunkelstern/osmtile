@@ -20,7 +20,9 @@ class StyleConfig():
         'none'
     ]
 
-    def __init__(self, data, styledir, config):        
+    def __init__(self, data, styledir, config):
+        self.fuse = data.get('fuse', False)
+
         # fill style
         self.fill_style = data.get('fill_style', 'solid')
         if self.fill_style not in self.FILL_STYLES:

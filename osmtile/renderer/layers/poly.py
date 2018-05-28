@@ -10,14 +10,22 @@ def render_poly_layer(layer, clip_poly, config, image, context):
     style = config.styles[layer.style]
     configure_context(context, layer, style)
 
+    # FIXME: probably fuse
+
     for item in fetch_geometry(config.db, layer, clip_poly):
         poly = loads(item['geometry'], hex=True)
         if isinstance(poly, MultiPolygon):
             for p in poly:
-                render_polygon(context, p)
+                if layer.expand > 0:
+                    render_polygon(context, p.buffer(layer.expand))
+                else:
+                    render_polygon(context, p)
                 stroke_and_fill(context, style, layer.stroke)
         else:
-            render_polygon(context, poly)
+            if layer.expand > 0:
+                render_polygon(context, poly.buffer(layer.expand))
+            else:
+                render_polygon(context, poly)
             stroke_and_fill(context, style, layer.stroke)
 
     context.restore()

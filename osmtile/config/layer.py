@@ -43,11 +43,13 @@ class LayerConfig:
         self.stroke = None
         self.width = None
         self.filter = None
+        self.expand = None
 
     def _parse(self, data, config):
         # fetch properties
         self.name = data.get('name')
         self.db_table = data.get('db_table')
+        self.expand = data.get('expand', 0)
 
         # type
         self.type = data.get('type', 'node')

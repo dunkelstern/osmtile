@@ -3,6 +3,7 @@
     "db_table": "osm_waterareas_gen1",
     "type": "polygon",
     "style": "water",
+    "expand": 30,
     "filter": {
         "type": [
             { "=": "water" }

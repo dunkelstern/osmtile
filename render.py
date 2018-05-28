@@ -17,7 +17,7 @@ parser.add_argument(
     type=int,
     nargs=1,
     dest='width',
-    default=2000,
+    default=[2000],
     help='Width in pixels of rendered map'
 )
 parser.add_argument(
@@ -25,7 +25,7 @@ parser.add_argument(
     type=int,
     nargs=1,
     dest='height',
-    default=1000,
+    default=[1000],
     help='Height in pixels of rendered map'
 )
 parser.add_argument(

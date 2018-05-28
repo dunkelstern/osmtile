@@ -73,7 +73,12 @@
         "stroke_color": "darken(road_residential, 20%)",
         "description_font": "road",
         "text_color": "darken(road_residential, 20%)",
-        "halo_color": "#fff"
+        "halo_color": "#fff",
+        "fuse": true
+    },
+    "road_residential_simple": {
+        "fill_color": "road_residential",
+        "fuse": false
     },
     "road_motorway": {
         "fill_color": "road_motorway",
@@ -81,7 +86,8 @@
         "description_font": "road",
         "text_color": "darken(road_motorway, 20%)",
         "halo_color": "#fff",
-        "shield_icon": "motorway"
+        "shield_icon": "motorway",
+        "fuse": true
     },
     "road_primary": {
         "fill_color": "road_primary",
@@ -89,7 +95,8 @@
         "description_font": "road",
         "text_color": "darken(road_primary, 20%)",
         "halo_color": "#fff",
-        "shield_icon": "primary"
+        "shield_icon": "primary",
+        "fuse": true
     },
 
     "railway": {
@@ -101,7 +108,8 @@
     "subway": {
         "fill_color": "subway",
         "stroke_color": "darken(subway, 20%)",
-        "fill_style": "dashed"
+        "fill_style": "dashed",
+        "fuse": true
     },
 
     "forest": {
@@ -110,7 +118,8 @@
         "text_color": "darken(forest, 20%)",
         "halo_color": "lighten(forest, 20%)",
         "fill_pattern_icon": "forest",
-        "fill_pattern_spacing": 30
+        "fill_pattern_spacing": 30,
+        "fuse": true
     },
     "water": {
         "fill_color": "water"
@@ -120,7 +129,8 @@
         "stroke_color": "darken(water, 20%)",
         "description_font": "road",
         "text_color": "darken(water, 20%)",
-        "halo_color": "#fff"
+        "halo_color": "#fff",
+        "fuse": true
     },
 
     "buildings": {
@@ -134,7 +144,8 @@
     },
 
     "zone_commercial": {
-        "fill_color": "zone_commercial"
+        "fill_color": "zone_commercial",
+        "fuse": true
     },
 
     "zone_parking": {

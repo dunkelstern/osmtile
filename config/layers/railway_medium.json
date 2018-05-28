@@ -4,8 +4,8 @@
     "type": "line",
     "text_column": "name",
     "style": "railway",
-    "width": 12,
-    "stroke": 2,
+    "width": 100,
+    "stroke": 20,
     "filter": {
         "type": [
             { "=": "rail" }
