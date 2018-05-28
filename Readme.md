@@ -2,7 +2,7 @@
 
 Python implementation for a OSM Map-Renderer
 
-![Example rendering](doc/example.png)
+![Example rendering](doc/series.gif)
 
 ## TODO
 
