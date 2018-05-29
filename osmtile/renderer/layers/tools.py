@@ -19,6 +19,7 @@ def stroke_and_fill(context, style, stroke_width=0):
         context.fill_preserve()
         stroke = list(style.stroke_color)
         stroke[3] *= stroke[3]
+        context.set_line_width(stroke_width)
         context.set_source_rgba(*stroke)
         context.stroke()
     else:
@@ -27,7 +28,6 @@ def stroke_and_fill(context, style, stroke_width=0):
 
 def configure_context(context, layer, style):
     context.set_source_rgba(*style.fill_color)
-    context.set_line_width(layer.stroke)
 
     multiplier = layer.stroke if layer.stroke > 0 else 1.0
     if style.stroke_style == 'dashed':

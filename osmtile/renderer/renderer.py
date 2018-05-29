@@ -8,6 +8,13 @@ class Renderer:
     def __init__(self, config):
         self.config = config
 
+        # HACK: de-list width and height
+        if isinstance(self.config.width, list):
+            self.config.width = self.config.width[0]
+        if isinstance(self.config.height, list):
+            self.config.height = self.config.height[0]
+
+
     def render(self, width, height, center, zoom):
         # calculate zoom and image aspect
         zoom_denominator = 2 ** zoom
