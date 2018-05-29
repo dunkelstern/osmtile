@@ -82,7 +82,7 @@
     },
     "road_motorway": {
         "fill_color": "road_motorway",
-        "stroke_color": "darken(road_motorway, 20%)",
+        "stroke_color": "darken(road_motorway, 30%)",
         "description_font": "road",
         "text_color": "darken(road_motorway, 20%)",
         "halo_color": "#fff",
@@ -91,7 +91,7 @@
     },
     "road_primary": {
         "fill_color": "road_primary",
-        "stroke_color": "darken(road_primary, 20%)",
+        "stroke_color": "darken(road_primary, 30%)",
         "description_font": "road",
         "text_color": "darken(road_primary, 20%)",
         "halo_color": "#fff",
@@ -102,7 +102,8 @@
     "railway": {
         "fill_color": "railway",
         "stroke_color": "darken(railway, 20%)",
-        "fill_style": "dashed"
+        "fill_style": "dashed",
+        "fuse": true
     },
 
     "subway": {

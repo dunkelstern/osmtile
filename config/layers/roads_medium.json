@@ -5,7 +5,7 @@
     "text_column": "name",
     "style": "road_residential",
     "width": 7,
-    "min_pixel_width": 6,
+    "min_pixel_width": 3,
     "stroke": 2,
     "filter": {
         "type": [

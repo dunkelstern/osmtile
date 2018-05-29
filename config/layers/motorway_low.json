@@ -5,8 +5,8 @@
     "text_column": "ref",
     "style": "road_motorway",
     "width": 15,
-    "min_pixel_width": 8,
-    "stroke": 3,
+    "min_pixel_width": 4,
+    "stroke": 8,
     "filter": {
         "type": [
             { "=": "motorway" },

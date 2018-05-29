@@ -10,7 +10,7 @@ generalized_tables:
     tolerance: 50.0
   railways_gen1:
     source: railways
-    tolerance: 50.0
+    tolerance: 100.0
   motorways_gen0:
     source: motorways_gen1
     tolerance: 200.0
@@ -19,7 +19,7 @@ generalized_tables:
     tolerance: 200.0
   railways_gen0:
     source: railways_gen1
-    tolerance: 200.0
+    tolerance: 400.0
   landusages_gen0:
     source: landusages_gen1
     sql_filter: ST_Area(geometry)>500000.000000

@@ -5,7 +5,7 @@
     "text_column": "name",
     "style": "waterway",
     "width": 6,
-    "min_pixel_width": 4,
+    "min_pixel_width": 1,
     "stroke": 1,
     "filter": {
         "type": [

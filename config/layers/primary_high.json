@@ -5,8 +5,8 @@
     "text_column": "ref",
     "style": "road_primary",
     "width": 12,
-    "min_pixel_width": 6,
-    "stroke": 3,
+    "min_pixel_width": 4,
+    "stroke": 6,
     "filter": {
         "type": [
             { "=": "primary" },

@@ -1,32 +1,13 @@
 [
     {
-        "name": "Secondary",
-        "db_table": "osm_roads_gen1",
-        "type": "line",
-        "text_column": "ref",
-        "style": "road_residential_simple",
-        "width": 10,
-        "min_pixel_width": 4,
-        "stroke": 2,
-        "filter": {
-            "type": [
-                { "=": "secondary" },
-                { "=": "secondary_link" }
-            ],
-            "class": [
-                { "=": "highway" }
-            ]
-        }
-    },
-    {
         "name": "Primary",
         "db_table": "osm_roads_gen1",
         "type": "line",
         "text_column": "ref",
         "style": "road_primary",
         "width": 12,
-        "min_pixel_width": 5,
-        "stroke": 3,
+        "min_pixel_width": 4,
+        "stroke": 6,
         "filter": {
             "type": [
                 { "=": "primary" },
