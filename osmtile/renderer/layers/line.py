@@ -1,12 +1,12 @@
 import datetime
-from math import sqrt
-from shapely.geometry import MultiPolygon
+from math import sqrt, atan2, floor
+from shapely.geometry import MultiPolygon, Polygon, LineString
 from shapely.wkb import loads
 from shapely.ops import cascaded_union, polygonize_full
 
 from .db import fetch_geometry
 from .tools import render_polygon, stroke_and_fill, configure_context
-
+from .text import render_text
 
 def render_line_layer(layer, clip_poly, config, image, context):
     context.save()
@@ -18,10 +18,7 @@ def render_line_layer(layer, clip_poly, config, image, context):
     # if the layer has a minimum pixel width, scale the size to meet that
     scale_factor = 1.0
     if layer.min_pixel_width is not None:
-        matrix = context.get_matrix()
-        matrix.invert()
-
-        rect = context.copy_clip_rectangle_list()[0]
+        rect = context.clip_rectangle_list[0]
         scale_factor = rect.width / config.width
 
         # we only upscale
@@ -69,7 +66,26 @@ def render_line_layer(layer, clip_poly, config, image, context):
         end = datetime.datetime.now()
         print(' -> Drawing took {} ms'.format((end-start).total_seconds() * 1000.0))
 
+    for item in fetch_geometry(config.db, layer, clip_poly):
+        geo = loads(item['geometry'], hex=True)
+        coords = list(geo.coords)
+        idx = floor(len(coords) / 2) - 1
+        center_line = LineString([coords[idx], coords[idx + 1]])
+
+        angle = atan2(coords[idx][0] - coords[idx+1][0], coords[idx][1] - coords[idx+1][1]) + 3.1415/2.0
+        if angle > 3.1415/2.0:
+            angle -= 3.1415
+        if angle < -3.1415/2.0:
+            angle += 3.1415
+        render_txt(context, config, center_line, item, layer, style, angle)
+
     context.restore()
 
 
-
+def render_txt(context, config, p, item, layer, style, angle):
+    # render text
+    text = item.get(layer.text_column, None)
+    if text is not None and len(text) > 0:
+        center = p.centroid
+        render_text(context, config, style, layer, text, center, rotation=angle)
+        # print(' -> Rendering "{}" at {}, {}'.format(text, center.x, center.y))

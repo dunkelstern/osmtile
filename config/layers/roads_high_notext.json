@@ -1,17 +1,20 @@
 {
     "name": "Roads",
-    "db_table": "osm_roads_gen1",
+    "db_table": "osm_roads",
     "type": "line",
     "style": "road_residential",
     "width": 7,
-    "min_pixel_width": 3,
+    "min_pixel_width": 2,
     "stroke": 2,
     "filter": {
         "type": [
             { "=": "secondary" },
             { "=": "secondary_link" },
             { "=": "tertiary" },
-            { "=": "tertiary_link" }
+            { "=": "tertiary_link" },
+            { "=": "unclassified" },
+            { "=": "residential" },
+            { "=": "living_street" }
         ],
         "class": [
             { "=": "highway" }

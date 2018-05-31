@@ -2,7 +2,6 @@ import argparse
 import datetime
 from osmtile import *
 
-
 parser = argparse.ArgumentParser(description='Render OSM Maps')
 parser.add_argument(
     '--config',

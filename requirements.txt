@@ -1,4 +1,4 @@
-pycairo
+git+https://github.com/ldo/qahirah.git
 psycopg2
 pyproj
 shapely[vectorized]

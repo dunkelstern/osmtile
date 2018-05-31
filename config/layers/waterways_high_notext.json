@@ -1,10 +1,10 @@
 {
     "name": "Waterways",
-    "db_table": "osm_waterways_gen1",
+    "db_table": "osm_waterways",
     "type": "line",
     "style": "waterway",
     "width": 6,
-    "min_pixel_width": 1,
+    "min_pixel_width": 4,
     "stroke": 1,
     "filter": {
         "type": [

@@ -1,14 +1,28 @@
 {
     "country": {
-        "face": "DejaVu Sans",
-        "size": 50,
+        "face": "Ubuntu",
+        "size": 15,
         "style": "regular",
-        "weight": 800,
+        "weight": 400,
         "halo_size": 3
     },
     "road": {
-        "face": "DejaVu Sans",
-        "size": 14,
+        "face": "Ubuntu",
+        "size": 13,
+        "style": "regular",
+        "weight": 400,
+        "halo_size": 2
+    },
+    "housenumber": {
+        "face": "Ubuntu",
+        "size": 8,
+        "style": "regular",
+        "weight": 400,
+        "halo_size": 0
+    },
+    "poi": {
+        "face": "Ubuntu",
+        "size": 12,
         "style": "regular",
         "weight": 400,
         "halo_size": 1

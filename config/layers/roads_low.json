@@ -2,7 +2,6 @@
     "name": "Roads",
     "db_table": "osm_roads_gen0",
     "type": "line",
-    "text_column": "name",
     "style": "road_residential",
     "width": 7,
     "min_pixel_width": 2,

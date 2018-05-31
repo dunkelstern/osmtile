@@ -3,14 +3,14 @@
         "fill_color": "#0000",
         "stroke_color": "border",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_state": {
         "fill_color": "#0000",
         "stroke_color": "border",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_county": {
@@ -18,7 +18,7 @@
         "stroke_color": "border",
         "stroke_style": "dashed",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_city": {
@@ -26,7 +26,7 @@
         "stroke_color": "border",
         "stroke_style": "dashed",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_town": {
@@ -34,7 +34,7 @@
         "stroke_color": "border",
         "stroke_style": "dashed",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_borough": {
@@ -42,7 +42,7 @@
         "stroke_color": "border",
         "stroke_style": "stippled",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_quartier": {
@@ -50,20 +50,20 @@
         "stroke_color": "border",
         "stroke_style": "dashed",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
 
     "border_city_fill": {
         "fill_color": "zone_residential",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
     "border_town_fill": {
         "fill_color": "alpha(border, 0.2)",
         "description_font": "country",
-        "text_color": "darken(border, 20%)",
+        "text_color": "#404040",
         "halo_color": "#fff"
     },
 
@@ -72,8 +72,8 @@
         "fill_color": "road_residential",
         "stroke_color": "darken(road_residential, 20%)",
         "description_font": "road",
-        "text_color": "darken(road_residential, 20%)",
-        "halo_color": "#fff",
+        "text_color": "darken(road_residential, 30%)",
+        "halo_color": "#ffffffa0",
         "fuse": true
     },
     "road_residential_simple": {
@@ -85,7 +85,7 @@
         "stroke_color": "darken(road_motorway, 30%)",
         "description_font": "road",
         "text_color": "darken(road_motorway, 20%)",
-        "halo_color": "#fff",
+        "halo_color": "#00000080",
         "shield_icon": "motorway",
         "fuse": true
     },
@@ -94,7 +94,7 @@
         "stroke_color": "darken(road_primary, 30%)",
         "description_font": "road",
         "text_color": "darken(road_primary, 20%)",
-        "halo_color": "#fff",
+        "halo_color": "#00000080",
         "shield_icon": "primary",
         "fuse": true
     },
@@ -130,13 +130,16 @@
         "stroke_color": "darken(water, 20%)",
         "description_font": "road",
         "text_color": "darken(water, 20%)",
-        "halo_color": "#fff",
+        "halo_color": "#ffffffa0",
         "fuse": true
     },
 
     "buildings": {
         "fill_color": "buildings",
-        "stroke_color": "darken(buildings, 15%)"
+        "stroke_color": "darken(buildings, 15%)",
+        "description_font": "housenumber",
+        "text_color": "darken(buildings, 25%)",
+        "halo_color": "#0000"
     },
 
     "buildings_light": {
@@ -146,7 +149,10 @@
 
     "public_buildings": {
         "fill_color": "public_buildings",
-        "stroke_color": "darken(public_buildings, 15%)"
+        "stroke_color": "darken(public_buildings, 15%)",
+        "description_font": "poi",
+        "text_color": "darken(public_buildings, 40%)",
+        "halo_color": "#ffffffa0"
     },
 
     "zone_commercial": {

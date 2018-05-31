@@ -29,6 +29,9 @@ class ColorConfig:
     def __iter__(self):
         return self.color_value.__iter__()
 
+    def __str__(self):
+        return "r: {}, g: {}, b: {}, a: {}".format(*self.color_value)
+
     def serialize(self):
         return self.color_definition
 

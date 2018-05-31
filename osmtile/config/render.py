@@ -3,6 +3,10 @@ import os
 import psycopg2
 from collections import OrderedDict
 
+from shapely.geometry import box
+from shapely.geometry.polygon import orient
+from shapely.prepared import prep
+
 from .font import FontConfig
 from .icon import IconConfig
 from .style import StyleConfig
@@ -12,6 +16,7 @@ from .color import ColorConfig
 class RenderConfig():
     
     def __init__(self, config):
+        self.occupied = []
         self.width = config.get('width', 2000)
         self.height = config.get('height', 1000)
         self.center = (
@@ -127,3 +132,23 @@ class RenderConfig():
             result[key] = constructor(item, result, self)
         return result
     
+    def register_occupied(self, poly):
+        # register an occupied box
+        self.occupied.append(poly)
+
+    def is_occupied(self, poly, auto_register=False):
+        # prepare for multiple checking
+        prepared = prep(poly)
+
+        # filter hits
+        hits = list(filter(prepared.intersects, self.occupied))
+        
+        # if we had no hits the area is not occupied
+        if len(hits) == 0:
+            if auto_register:
+                # register box as occupied
+                self.occupied.append(poly.buffer(20, resolution=1))
+            return False
+        
+        # space is occupied
+        return True

@@ -1,4 +1,6 @@
-import cairo
+import qahirah as qah
+from qahirah import CAIRO, Colour, Matrix, Vector
+
 from pyproj import Proj, transform
 from .layers import *
 import datetime
@@ -63,34 +65,34 @@ class Renderer:
 
     def create_image(self, width, height, background_color, center, render_size):
         # create cairo image and context
-        surface = cairo.ImageSurface(cairo.Format.ARGB32, width, height)
-        context = cairo.Context(surface)
+        surface = qah.ImageSurface.create(CAIRO.FORMAT_ARGB32, (width, height))
+        context = qah.Context.create(surface).set_operator(CAIRO.OPERATOR_OVER)
 
-        context.rectangle(0, 0, width, height)
-        context.set_source_rgba(*self.config.background)
+        context.rectangle(qah.Rect(0, 0, width, height))
+        context.source_colour = self.config.background.color_value
         context.fill()
 
         # set transform matrix for context
 
         # flip context
-        context.translate(0, height)
-        context.scale(1, -1)
+        context.translate((0, height))
+        context.scale((1, -1))
 
         # move zero point into middle
-        context.translate(-width / 2.0, -height / 2.0)
-        context.scale(width, height)
+        context.translate((-width / 2.0, -height / 2.0))
+        context.scale((width, height))
 
         # scale to map
-        context.scale(1.0 / render_size[0], 1.0 / render_size[1])
-        context.translate(-center[0] + render_size[0], -center[1] + render_size[1])
+        context.scale((1.0 / render_size[0], 1.0 / render_size[1]))
+        context.translate((-center[0] + render_size[0], -center[1] + render_size[1]))
 
-        print(context.copy_clip_rectangle_list())
+        print(context.clip_rectangle_list)
 
         # default settings
-        context.set_antialias(cairo.Antialias.GRAY)
-        context.set_line_cap(cairo.LineCap.ROUND)
-        context.set_line_join(cairo.LineJoin.ROUND)
-        context.set_fill_rule(cairo.FillRule.EVEN_ODD)
+        context.fill_rule = CAIRO.FILL_RULE_EVEN_ODD
+        context.line_cap = CAIRO.LINE_CAP_ROUND
+        context.line_join = CAIRO.LINE_JOIN_ROUND
+        context.antialias = CAIRO.ANTIALIAS_GRAY
 
         return (surface, context)
 

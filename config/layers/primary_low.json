@@ -3,7 +3,6 @@
         "name": "Secondary",
         "db_table": "osm_roads_gen0",
         "type": "line",
-        "text_column": "ref",
         "style": "road_residential_simple",
         "width": 10,
         "min_pixel_width": 1,

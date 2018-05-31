@@ -3,7 +3,7 @@
 rm -f *.png
 
 for i in {8..17} ; do
-	python render.py --config config/config.json --width 640 --height 480 48.375884 10.889796 $i
+	python render.py --config config/config.json --width 800 --height 600 48.375884 10.889796 $i
 	mv out.png $(printf %02d $(( $i - 8 )) ).png
 done
 
