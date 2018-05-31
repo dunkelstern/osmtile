@@ -6,8 +6,6 @@ Python implementation for a OSM Map-Renderer
 
 ## TODO
 
-- Stroke and line width scales with scaling factor which is probably wrong
-- Text (this will be quite hard)
 - Node rendering (Icons)
 - Effects (icon fill, pattern fill, etc.)
 
